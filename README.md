@@ -1,114 +1,93 @@
-# ALPS – Adventist Living Pattern System
+![license](https://img.shields.io/github/license/pattern-lab/edition-php-twig-standard.svg)
+[![Packagist](https://img.shields.io/packagist/v/pattern-lab/edition-twig-standard.svg)](https://packagist.org/packages/pattern-lab/edition-mustache-webdesignday) [![Gitter](https://img.shields.io/gitter/room/pattern-lab/php.svg)](https://gitter.im/pattern-lab/php)
 
-This is the future home of the ALPS codebase. The pattern library is built off of [Pattern Lab](http://patternlab.io/), and a tool based on atomic design.
+# Pattern Lab Standard Edition for Twig
 
-[![Deployment status from DeployBot](https://adventistchurch.deploybot.com/badge/77558060106370/73245.svg)](http://deploybot.com)
+The Standard Edition for Twig gives developers and designers a clean and stable base from which to develop a Twig-based pattern library.
 
-## Want to make changes?
-If you want to make changes, feel free to fork the repository and create a pull request.
+## Packaged Components
 
-## Questions or Issues?
-Questions or issues can be [filed as tickets on this repository](https://github.com/adventistchurch/alps/issues) and will be handled using the GitHub system.
+The Standard Edition for Twig comes with the following components:
 
-## Seventh-day Adventist Pattern Lab
+* `pattern-lab/core`: [GitHub](https://github.com/pattern-lab/patternlab-php-core), [Packagist](https://packagist.org/packages/pattern-lab/core)
+* `pattern-lab/patternengine-twig`: [documentation](https://github.com/pattern-lab/patternengine-php-twig#twig-patternengine-for-pattern-lab-php), [GitHub](https://github.com/pattern-lab/patternengine-php-twig), [Packagist](https://packagist.org/packages/pattern-lab/patternengine-twig)
+* `pattern-lab/styleguidekit-assets-default`: [GitHub](https://github.com/pattern-lab/styleguidekit-assets-default), [Packagist](https://packagist.org/packages/pattern-lab/styleguidekit-assets-default)
+* `pattern-lab/styleguidekit-twig-default`: [GitHub](https://github.com/pattern-lab/styleguidekit-twig-default), [Packagist](https://packagist.org/packages/pattern-lab/styleguidekit-twig-default)
 
-## Overview
-This repository contains the front-end code for the Seventh Day Adventist project. [Pattern Lab](http://patternlab.io/) is the tool used for pattern template building and pattern library compilation.
+## Installing
 
-### Getting Started
+There are two methods for downloading and installing the Standard Edition for Twig:
 
-- Set up your local dev url to be `alps.dev`
-- [Install node globally](https://docs.npmjs.com/getting-started/installing-node)
-- run `npm install` (may need to be run as `sudo`)
-- run `grunt`
-- get mamp working and point toward the patternlab/public folder
+* [Download a pre-built project](#download-a-pre-built-package)
+* [Use Composer to create a project](#use-composer-to-create-a-project)
 
-This creates all patterns, the styleguide, and the pattern lab site as well as a local server for development.
+### Download a pre-built project
 
-## Project Standards
+The fastest way to get started with the Standard Edition for Twig is to [download the pre-built version](https://github.com/pattern-lab/edition-php-twig-standard/releases) from the [releases page](https://github.com/pattern-lab/edition-php-twig-standard/releases). The pre-built project comes with the [Base StarterKit for Twig](https://github.com/pattern-lab/starterkit-twig-base) installed by default.
 
-### Front-End General Best Practices
-1. Separation of presentation, content, and behavior.
-2. Markup should be well-formed, semantically correct, and generally valid (if possible).
-3. Javascript should progressively enhance the experience.
-4. Always keep performance at top of mind when coding.
+**Please note:** Pattern Lab uses [Composer](https://getcomposer.org/) to manage project dependencies. To upgrade the Standard Edition for Twig or to install plug-ins you'll need to [install Composer](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx). We recommend that you [install it globally](https://getcomposer.org/doc/00-intro.md#globally).
 
-### CSS Coding Standards
-The CSS in this project follows [Harry Robert's](http://csswizardry.com/) [itcss](http://itcss.io/) architecture. [CSS/SCSS Coding Best Practices](http://cssguidelin.es/) should be the referenced standards guide when writing sane, manageable, scalable CSS.
+### Use Composer to create a project
 
-### Git Commit Messages
-All commit messages should abide by the following criteria:
+Pattern Lab uses [Composer](https://getcomposer.org/) to manage project dependencies.
 
-* Begin with a one line summary. It should be short (50 chars or less).
-* This should be followed by a longer description if necessary.
-* The first two items should be separated by an empty line.
-* All lines should be wrapped at approximately 72 characters.
-* Reference an issue in your commits whenever possible. Use the [Github standard](https://help.github.com/articles/closing-issues-via-commit-messages/) ```gh-34``` for ticket ```#34```.
-* If you forget to reference the issue in your commit, and the commit has already been pushed, reference the commit hash in a comment on the ticket.
+#### 1. Install Composer
 
-### Troubleshooting Installs
+Please follow the directions for [installing Composer](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx) on the Composer website. We recommend you [install it globally](https://getcomposer.org/doc/00-intro.md#globally).
 
-Make sure you are running your terminal/command line session as administrator. This could mean `sudo`, or opening the window with a right-click option.
+#### 2. Install the Standard Edition for Twig
 
-## About Pattern Lab
-- [Pattern Lab Website](http://patternlab.io/)
-- [About Pattern Lab](http://patternlab.io/about.html)
-- [Documentation](http://patternlab.io/docs/index.html)
-- [Demo](http://demo.patternlab.io/)
+Use Composer's [`create-project` command](https://getcomposer.org/doc/03-cli.md#create-project) to install the Standard Edition for Twig into a location of your choosing. In Terminal type:
 
-The PHP version of Pattern Lab is, at its core, a static site generator. It combines platform-agnostic assets, like the [Mustache](http://mustache.github.io/)-based patterns and the JavaScript-based viewer, with a PHP-based "builder" that transforms and dynamically builds the Pattern Lab site. By making it a static site generator, Pattern Lab strongly separates patterns, data, and presentation from build logic.
+    cd install/location/
+    composer create-project pattern-lab/edition-twig-standard your-project-name && cd $_
 
-## Demo
+This will install the Standard Edition for Twig into a directory called `your-project-name` in `install/location/`. During the set-up process you will be asked to install an appropriate StarterKit. You will be automatically dropped into the project directory after the process is finished.
 
-You can play with a demo of the front-end of Pattern Lab at [demo.patternlab.io](http://demo.patternlab.io).
+## Updating Pattern Lab
 
-## Getting Started
+To update Pattern Lab please refer to each component's GitHub repository. The components are listed at the top of the README.
 
-* [Requirements](http://patternlab.io/docs/requirements.html)
-* [Installing the PHP Version of Pattern Lab](http://patternlab.io/docs/installation.html)
-* [Upgrading the PHP Version of Pattern Lab](http://patternlab.io/docs/upgrading.html)
-* [Generating the Pattern Lab Website for the First Time](http://patternlab.io/docs/first-run.html)
-* [Editing the Pattern Lab Website Source Files](http://patternlab.io/docs/editing-source-files.html)
-* [Using the Command-line Options](http://patternlab.io/docs/command-line.html)
-* [Command Prompt on Windows](http://patternlab.io/docs/command-prompt-windows.html)
+## Helpful Commands
 
-## Working with Patterns
+These are some helpful commands you can use on the command line for working with Pattern Lab.
 
-Patterns are the core element of Pattern Lab. Understanding how they work is the key to getting the most out of the system. Patterns use [Mustache](http://mustache.github.io/) so please read [Mustache's docs](http://mustache.github.io/mustache.5.html) as well.
+### List all of the available commands
 
-* [How Patterns Are Organized](http://patternlab.io/docs/pattern-organization.html)
-* [Adding New Patterns](http://patternlab.io/docs/pattern-add-new.html)
-* [Reorganizing Patterns](http://patternlab.io/docs/pattern-reorganizing.html)
-* [Including One Pattern Within Another via Partials](http://patternlab.io/docs/pattern-including.html)
-* [Managing Assets for a Pattern: JavaScript, images, CSS, etc.](http://patternlab.io/docs/pattern-managing-assets.html)
-* [Modifying the Pattern Header and Footer](http://patternlab.io/docs/pattern-header-footer.html)
-* [Using Pseudo-Patterns](http://patternlab.io/docs/pattern-pseudo-patterns.html)
-* [Using Pattern Parameters](http://patternlab.io/docs/pattern-parameters.html)
-* [Using Pattern State](http://patternlab.io/docs/pattern-states.html)
-* ["Hiding" Patterns in the Navigation](http://patternlab.io/docs/pattern-hiding.html)
-* [Adding Annotations](http://patternlab.io/docs/pattern-adding-annotations.html)
-* [Viewing Patterns on a Mobile Device](http://patternlab.io/docs/pattern-mobile-view.html)
+To list all available commands type:
 
-## Creating & Working With Dynamic Data for a Pattern
+    php core/console --help
 
-The PHP version of Pattern Lab utilizes Mustache as the template language for patterns. In addition to allowing for the [inclusion of one pattern within another](http://patternlab.io/docs/pattern-including.html) it also gives pattern developers the ability to include variables. This means that attributes like image sources can be centralized in one file for easy modification across one or more patterns. The PHP version of Pattern Lab uses a JSON file, `source/_data/data.json`, to centralize many of these attributes.
+To list the options for a particular command type:
 
-* [Introduction to JSON & Mustache Variables](http://patternlab.io/docs/data-json-mustache.html)
-* [Overriding the Central `data.json` Values with Pattern-specific Values](http://patternlab.io/docs/data-pattern-specific.html)
-* [Linking to Patterns with Pattern Lab's Default `link` Variable](http://patternlab.io/docs/data-link-variable.html)
-* [Creating Lists with Pattern Lab's Default `listItems` Variable](http://patternlab.io/docs/data-listitems.html)
+    php core/console --help --[command]
 
-## Using Pattern Lab's Advanced Features
+### Generate Pattern Lab
 
-By default, the Pattern Lab assets can be manually generated and the Pattern Lab site manually refreshed but who wants to waste time doing that? Here are some ways that Pattern Lab can make your development workflow a little smoother:
+To generate the front-end for Pattern Lab type:
 
-* [Watching for Changes and Auto-Regenerating Patterns](http://patternlab.io/docs/advanced-auto-regenerate.html)
-* [Auto-Reloading the Browser Window When Changes Are Made](http://patternlab.io/docs/advanced-reload-browser.html)
-* [Multi-browser & Multi-device Testing with Page Follow](http://patternlab.io/docs/advanced-page-follow.html)
-* [Keyboard Shortcuts](http://patternlab.io/docs/advanced-keyboard-shortcuts.html)
-* [Special Pattern Lab-specific Query String Variables ](http://patternlab.io/docs/pattern-linking.html)
-* [Preventing the Cleaning of public/](http://patternlab.io/docs/advanced-clean-public.html)
-* [Generating CSS](http://patternlab.io/docs/advanced-generating-css.html)
-* [Modifying the Pattern Lab Nav](http://patternlab.io/docs/advanced-pattern-lab-nav.html)
-* [Editing the config.ini Options](http://patternlab.io/docs/advanced-config-options.html)
-* [Integration with Compass](http://patternlab.io/docs/advanced-integration-with-compass.html)
+    php core/console --generate
+
+### Watch for changes and re-generate Pattern Lab
+
+To watch for changes and re-generate the front-end for Pattern Lab type:
+
+    php core/console --watch
+
+### Start a server to view Pattern Lab
+
+You can use PHP's built-in web server to review your Pattern Lab project in a browser. In a seperate window type:
+
+    php core/console --server
+
+Then open [http://localhost:8080](http://localhost:8080) in your browser.
+
+### Install a StarterKit
+
+To install a near-empty StarterKit as a starting point for your project type:
+
+    php core/console --starterkit --init
+
+To install a specific StarterKit from GitHub type:
+
+    php core/console --starterkit --install <starterkit-vendor/starterkit-name>
