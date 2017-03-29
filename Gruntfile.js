@@ -27,7 +27,7 @@ module.exports = function(grunt) {
                             // maxBuffer: Infinity
                     },
                 },
-                command: "php core/builder.php -g",
+                command: "php core/console --generate",
             },
             go: {
                 // command: "php -S localhost:4000 -t public"
